@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Add Comment</title>
+    <!-- <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script> -->
+  </head>
+  <body>
+    <%- include layout %>
+    <h2 align="center"> Comment 2</h2>
+    <h2><%= database %></h2>
+    <h2>Comment <%= count_collection %></h2>
+    <h2>Views <%= count %></h2>
+    <dir class="conainer">
+        <% if(locals.errors) { %>
+        <ul class= "alert alert-danger">
+        <ul>
+            <% Object.values(errors).forEach(function(error){ %>
+                <li><%= error.msg %></li>
+            <% }) %>
+        </ul>
+        <% } %>
+        </ul>
+        <form class="" action="/blog/project2" method="post">
+            <dir class="form-group">
+                <label for="">ชื่อบทความ</label><br>
+                <input type="text" name="name" value="" class="form-control">
+            </dir>
+            <dir class="form-group">
+                <label for="">รายละเอียด</label><br>
+                <textarea name="description" rows="8" cols="80" class="form-control"></textarea><br>
+                <input type="submit" name="" value="save" class="btn btn-primary">
+            </dir>
+            
+        </form>     
+    </dir>
+
+    <form class="" action="/blog/like2" method="post">
+        <h2 align="center"><%= count_PJ2_like %></h2>
+        <h2 align="center"><input type="submit" name="" value="like" class="btn btn-success"></h2>
+    
+    </form>
+
+    <form class="" action="/blog/dislike2" method="post">
+        <h2 align="center"><%= count_PJ2_dislike %></h2>
+        <h2 align="center"><input type="submit" name="" value="dislike" class="btn btn-danger"></h2>
+    
+    </form>
+    <!-- <script>
+        CKEDITOR.replace( 'description' );
+    </script> -->
+  </body>
+</html>

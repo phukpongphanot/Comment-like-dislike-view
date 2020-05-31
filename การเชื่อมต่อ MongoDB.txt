@@ -1,0 +1,15 @@
+กราเชื่อมต่อไปยัง mongoDB server
+1. เปิด command prompt 
+2. พิมพ์ mongod
+3. พิมพ์ mongo
+4. ดูในหนังสือ nodejs หน้า 122
+5. show dbs // แสดงว่ามี database อะไรบ้าง
+6. การสร้าง database ให้ use "ชื่อ databaseที่จะสร้าง" แล้ว db."ชื่อ database".insertOne({name:"non",age:"20"}) ได้เลย
+6.use "ชื่อ database" //  การเรียกใช้ database นั้นๆ
+7. db.drop"ชื่อ database"() //  ลบ database แต่ต้องเข้าไปใน  database นั้นก่อน
+7. show collections // แสดงว่ามี  collections อะไรบ้าง
+8. db."ชื่อ collection".drop() //วิธีการลบ collection แต่ต้อง use เข้าไปใน database นั้นก่อน
+7. db."ชื่อ database".insertOne({name:"non",age:"20"})
+8. db."ชื่อ collection".find().pretty()  //แสดงข้อมูลใน collection จัดให้อ่านง่าย
+9. db.comment.findOne()  //แสดงข้อมูลใน collection จัดให้อ่านง่าย
+10. db.comment.find() // แสดงข้อมูลใน collection
